@@ -124,7 +124,8 @@ public class ElasticsearchTest {
         //管道
         //request.setPipeline("pipeline");
 
-        client.index(request, RequestOptions.DEFAULT);
+        IndexResponse index = client.index(request, RequestOptions.DEFAULT);
+        System.err.println(index);
     }
 
     @Test
