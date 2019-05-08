@@ -22,6 +22,12 @@ public class ForkJoinSumCalulator extends RecursiveTask<Long> {
 
     @Override
     protected Long compute() {
+        try {
+            Thread.sleep(10);
+        } catch (Exception e) {
+
+        }
+
         int length = end - start;
         if (length <= THRESHOLD) {
             long sum = 0;
